@@ -7,7 +7,7 @@
 
 <script>
 import CareAssestsTable from "@/components/CareAssestsTable";
-import api from '@/api'
+import api from '@/api';
 
 export default {
 
@@ -18,7 +18,6 @@ export default {
     return{
       isLoading:false,
       assets:[]
-        
     }
   },
 
