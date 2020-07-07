@@ -104,8 +104,8 @@
 </template>
 
 <script>
-import api from '@/api';
-import CareButton from '@/components/CareButton';
+import api from '@/api'
+import CareButton from '@/components/CareButton'
 
 export default {
   name: 'CoinDetail',
@@ -138,19 +138,19 @@ export default {
 
     min() {
       return Math.min(
-        this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
+        ...this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
       )
     },
 
     max() {
       return Math.max(
-        this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
+        ...this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
       )
     },
 
     avg() {
       return Math.abs(
-        this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
+        ...this.history.map(h => parseFloat(h.priceUsd).toFixed(2))
       )
     }
   },
